@@ -1,13 +1,15 @@
 package com.movechat.chat.chat.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@RequiredArgsConstructor
 @Getter
+@Builder
 public class ChatRoom {
 
     @Id
@@ -18,4 +20,8 @@ public class ChatRoom {
 
     @OneToMany(mappedBy = "chatRoom",fetch = FetchType.LAZY)
     private List<JoinChat> joinChats = new ArrayList<>();
+
+    public void addUser(List<JoinChat> joinChats) {
+        this.joinChats = joinChats;
+    }
 }

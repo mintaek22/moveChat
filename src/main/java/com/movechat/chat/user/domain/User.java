@@ -2,9 +2,11 @@ package com.movechat.chat.user.domain;
 
 import com.movechat.chat.chat.domain.ChatRoom;
 import com.movechat.chat.chat.domain.JoinChat;
+import com.movechat.chat.chat.domain.Message;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.lang.module.FindException;
 import java.util.ArrayList;
 import java.util.List;
 

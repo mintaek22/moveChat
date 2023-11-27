@@ -1,5 +1,6 @@
 package com.movechat.chat.chat.domain;
 
+import com.movechat.chat.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 
